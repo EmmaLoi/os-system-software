@@ -232,6 +232,3 @@ UserShell: /bin/zsh
 ➜  lab2 dscl . -read /Groups/admin GroupMembership
 GroupMembership: root emmaloj trainee
 ```
-
-### Спостереження
-На macOS немає команд useradd чи usermod, як у "класичному" Linux. Натомість користувачі керуються через sysadminctl (створення) та dscl (перегляд і редагування атрибутів, у тому числі членства в групах). Аналог "sudo-групи" на macOS — це група admin, а не sudo. Дані про користувача зберігаються не у звичайному текстовому файлі /etc/passwd, а в системі Directory Service, тому й переглядаються через dscl, а не через cat /etc/passwd.
